@@ -1,0 +1,20 @@
+
+Two groups
+
+Policy -
+    Dev group       - get_object, put_object
+    Financial group - get_object     
+
+
+Create a new Policy :
+- Go into Permissions in S3 buckets
+- Then go to Bucket Policy
+- In the bottom : click on generate policy
+- In type of Policy select S3 Bucket Policy
+- Give allow
+- Copy ARN and paste it in Principle
+- Select S3 under AWS services
+- Under Actions select the required Actions
+- Under Amazon Resources Name (ARN) - Paste the bucket ARN (present under Bucket Policy)
+- Add statement , Generate policy
+- Copy and paste in Bucket Policy 
