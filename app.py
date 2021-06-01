@@ -29,7 +29,7 @@ def save_file():
 		
 # api to get all file names
 @app.route('/api/list/files', methods = ['GET'])
-def get_all_files():
+def list_all_files():
 
     all_files = list_files_handler()
 
@@ -49,10 +49,12 @@ def get_all_files():
         "result": result
     }
 
-@app.route('/api/delete/file', methods = ['GET'])
+@app.route('/api/delete/file', methods = ['POST'])
 def delete_files():
+    
+    file_name = request.form['file_name']
 
-    result = delete_file_handler()
+    result = delete_file_handler(file_name)
 
     return {
         "result": result

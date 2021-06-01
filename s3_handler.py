@@ -48,7 +48,7 @@ def list_files_handler():
     """
     contents = []
     for item in client.list_objects(Bucket=BUCKET_NAME)['Contents']:
-        contents.append(item.Key)
+        contents.append(item['Key'])
 
     return contents
 
